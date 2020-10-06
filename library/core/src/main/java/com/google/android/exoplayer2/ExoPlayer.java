@@ -132,7 +132,7 @@ import java.util.List;
  * </ul>
  */
 public interface ExoPlayer extends Player {
-
+  long DEFAULT_RELEASE_TIMEOUT_MS = 500; 
   /**
    * A builder for {@link ExoPlayer} instances.
    *

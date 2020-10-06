@@ -12,6 +12,22 @@
         [#7993](https://github.com/google/ExoPlayer/issues/7993)).
     *   Add 403, 500 and 503 to the list of HTTP status codes that can trigger
         failover to another quality variant during adaptive playbacks.
+    *   Fix bug where streams with highly uneven durations may get stuck in a
+        buffering state
+        ([#7943](https://github.com/google/ExoPlayer/issues/7943)).
+    *   Verify correct thread usage in `SimpleExoPlayer` by default. Opt-out is
+        still possible until the next major release using
+        `setThrowsWhenUsingWrongThread(false)`
+        ([#4463](https://github.com/google/ExoPlayer/issues/4463)).
+    *   Add a getter and callback for static metadata to the player
+        ([#7266](https://github.com/google/ExoPlayer/issues/7266)).
+    *   Time out on release to prevent ANRs if the underlying platform call
+        is stuck ([#4352](https://github.com/google/ExoPlayer/issues/4352)).
+    *   Time out when detaching a surface to prevent ANRs if the underlying
+        platform call is stuck
+        ([#5887](https://github.com/google/ExoPlayer/issues/5887)).
+*   Track selection:
+    *   Add option to specify multiple preferred audio or text languages.
 *   Data sources:
     *   Add support for `android.resource` URI scheme in `RawResourceDataSource`
         ([#7866](https://github.com/google/ExoPlayer/issues/7866)).
